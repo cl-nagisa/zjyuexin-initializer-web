@@ -1,0 +1,115 @@
+.tagMenu-wrapper
+  position: relative
+  display: flex
+  align-items: center
+  height: 45px
+  background-color: #FFFFFF
+  border-bottom: 1px solid #EEEEEE
+  .menu-collapse-switch
+    margin-left: 15px
+    font-size: 22px
+    cursor: pointer
+  .tags
+    display: flex
+    align-items: flex-end
+    flex: 1
+    height: 100%
+    margin-left: 20px
+    overflow: auto hidden
+    &::-webkit-scrollbar
+      height: 0
+    li
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      flex: 0 0 auto
+      height: 36px
+      padding: 0 24px
+      background-color: #FFFFFF
+      border: 2px solid #ebf2f7
+      border-bottom: none
+      font-size: 14px
+      color: #666
+      cursor: pointer
+      &:first-child
+        margin-left: 30px
+      &:last-child
+        margin-right: 30px
+      &.active
+        background-color: #ebf2f7
+        border-color: #ebf2f7
+        font-weight: bold
+        color: #333
+        .left-border
+          &:after
+            top: 2px
+            border-style: solid
+            border-color: transparent transparent #ebf2f7 #ebf2f7
+            border-width: 0 8px 36px 4px
+        .right-border
+          &:after
+            border-style: solid
+            border-color: transparent transparent #ebf2f7 #ebf2f7
+            border-width: 0 8px 36px 2px
+      .left-border
+        position: absolute
+        left: -2px
+        top: -2px
+        width: 5px
+        height: 36px
+        background-color: #FFFFFF
+        &:after
+          content: ""
+          position: absolute
+          width: 2px
+          height: 37px
+          background-color: #ebf2f7
+          transform-origin: 100% 50%
+          transform: rotate(12deg)
+      .right-border
+        position: absolute
+        right: -2px
+        top: -2px
+        width: 5px
+        height: 36px
+        background-color: #FFFFFF
+        &:after
+          content: ""
+          position: absolute
+          right: 1px
+          width: 2px
+          height: 37px
+          background-color: #ebf2f7
+          transform-origin: 100% 50%
+          transform: rotate(-12deg)
+      .del
+        position: relative
+        width: 14px
+        height: 14px
+        margin-left: 10px
+        border-radius: 100%
+        transition: all .3s cubic-bezier(.645, .045, .355, 1)
+        transform-origin: 100% 50%
+        &:before
+          position: absolute
+          transform: scale(.8)
+        &:hover
+          background-color: #9AB2CB
+          color: #FFFFFF
+  .tags-rightClick-menu
+    z-index: 3000
+    position: absolute
+    padding: 5px 0
+    background-color: #FFFFFF
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .3)
+    border-radius: 4px
+    font-size: 12px
+    font-weight: 400
+    color: #333
+    li
+      padding: 7px 16px
+      transition: all .2s
+      cursor: pointer
+      &:hover
+        background-color: #EEEEEE

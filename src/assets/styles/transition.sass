@@ -1,0 +1,39 @@
+// 仅用于编写各类过度动画的样式效果，常以 tr- 开头
+
+/* fade */
+.tr-fade-enter-active,
+.tr-fade-leave-active
+  transition: opacity 0.28s
+
+.tr-fade-enter,
+.tr-fade-leave-active
+  opacity: 0
+
+/* fade-transform */
+.tr-fade-transform-leave-active,
+.tr-fade-transform-enter-active
+  transition: all .5s
+
+.tr-fade-transform-enter
+  opacity: 0
+  transform: translateX(-30px)
+
+.tr-fade-transform-leave-to
+  opacity: 0
+  transform: translateX(30px)
+
+/* breadcrumb transition */
+.tr-breadcrumb-enter-active,
+.tr-breadcrumb-leave-active
+  transition: all .5s
+
+.tr-breadcrumb-enter,
+.tr-breadcrumb-leave-active
+  opacity: 0
+  transform: translateX(20px)
+
+.tr-breadcrumb-move
+  transition: all .5s
+
+.tr-breadcrumb-leave-active
+  position: absolute

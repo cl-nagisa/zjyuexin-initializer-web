@@ -1,0 +1,26 @@
+.eFDrawer-header
+  display: flex
+  align-items: center
+  height: 45px
+  padding: 0 15px
+  border-bottom: 1px solid #EEEEEE
+  font-size: 16px
+  color: #333
+  cursor: default
+  label
+    flex: 1
+
+.eFDrawer-wrapper
+  height: calc(100% - 45px)
+  overflow-y: auto
+  ::v-deep .form-wrapper
+    .el-form
+      padding: 15px
+      .el-input-number
+        width: 100%
+        input
+          text-align: left
+      .el-select
+        width: 100%
+      .el-cascader
+        width: 100%

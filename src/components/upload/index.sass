@@ -1,0 +1,11 @@
+.yx-upload
+  &.disabled
+    ::v-deep .el-upload-list__item
+      &:first-child
+        margin-top: 0
+      .el-upload-list__item-status-label
+        display: none
+    ::v-deep .el-upload
+      display: none
+  .el-upload__tip
+    line-height: normal

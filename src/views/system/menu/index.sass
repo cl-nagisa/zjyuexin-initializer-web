@@ -1,0 +1,50 @@
+.menu-wrapper
+  display: flex
+  .title-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 50px
+    padding: 0 20px
+    border-bottom: 1px solid #DDDDDD
+    font-size: 16px
+    color: #333
+  .search-wrapper
+    display: flex
+    align-items: center
+    height: 50px
+    padding: 0 20px
+    .el-input__icon
+      cursor: pointer
+  .menu-tree
+    flex: 0 0 auto
+    background-color: #FFFFFF
+    border-radius: 6px
+    .tree
+      height: calc(100% - 50px - 50px)
+      padding: 0 20px 10px 12px
+      overflow: hidden auto
+      &::-webkit-scrollbar
+        width: 0
+      .node
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex: 1
+        .name
+          font-size: 14px
+        .opt
+          display: flex
+          align-items: center
+          margin-left: 40px
+  .menu-detail
+    flex: 1
+    margin-left: 20px
+    background-color: #FFFFFF
+    border-radius: 6px
+    .form
+      height: calc(100% - 50px)
+      padding: 20px
+      overflow: hidden auto
+      &::-webkit-scrollbar
+        width: 0

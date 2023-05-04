@@ -1,0 +1,37 @@
+// 全局公共基础样式，只能包含原生html元素
+
+*,*:after,*:before
+  box-sizing: border-box
+
+html,body,#app
+  height: 100%
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif
+
+ul,li
+  list-style: none
+  margin: 0
+  padding: 0
+
+::-webkit-scrollbar-track
+  border-radius: 6px
+  width: 6px
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1)
+  background-color: #f5f5f5
+
+::-webkit-scrollbar
+  height: 6px
+  width: 6px
+  border-radius: 6px
+  background-color: #f5f5f5
+
+::-webkit-scrollbar-thumb
+  border-radius: 6px
+  width: 6px
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1)
+  background-color: rgba(0, 0, 0, 0.2)
+
+.amap-logo
+  display: none !important
+
+.amap-copyright
+  opacity: 0

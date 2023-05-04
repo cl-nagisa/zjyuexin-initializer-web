@@ -1,0 +1,75 @@
+@import "@/assets/styles/element-variables"
+
+.yx-uploader-wrapper
+  ::v-deep .yx-uploader
+    .uploader-btn
+      line-height: 1
+      padding: 7px 15px
+      background-color: $--color-primary
+      border: 1px solid $--color-primary
+      border-radius: 3px
+      font-size: 12px
+      color: #FFFFFF
+    .fileList
+      &.disabled
+        .uploader-file-remove,.el-icon-close
+          display: none!important
+      &.uploading
+        .uploader-file-remove,.el-icon-close
+          display: none!important
+      li
+        cursor: pointer
+        &:hover
+          background-color: #f5f7fa
+          .uploader-file-name
+            color: $--color-primary
+          label
+            color: $--color-primary
+      .uploader-file
+        height: 32px
+        line-height: 32px
+        border-bottom: none
+        .uploader-file-info
+          display: flex
+          .uploader-file-name
+            flex: 1
+            width: auto
+            text-indent: inherit
+            .uploader-file-icon
+              display: none
+          .uploader-file-meta
+            display: none
+          .uploader-file-size
+            display: none
+          .uploader-file-status
+            flex: 0 0 auto
+            width: auto
+            padding-right: 10px
+            color: #666
+            span
+              &:nth-child(2)
+                em,i
+                  display: none
+          .uploader-file-actions
+            display: flex
+            align-items: center
+            flex: 0 0 auto
+            width: auto
+            .uploader-file-pause,.uploader-file-resume,.uploader-file-retry
+              display: none
+            .uploader-file-remove
+              display: block
+            span
+              margin: 0
+      .uploaded
+        display: flex
+        justify-content: space-between
+        align-items: center
+        label
+          cursor: pointer
+        i
+          font-size: 16px
+          font-weight: bold
+          color: #999
+          &:hover
+            color: #DA0303

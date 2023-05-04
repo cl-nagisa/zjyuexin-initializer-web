@@ -1,0 +1,69 @@
+// 仅用于改写element-ui三方组件库的样式，常以 yx-el- 开头
+@import "@/assets/styles/variables"
+@import "@/assets/styles/element-variables"
+
+// 左侧菜单栏主题色配置
+.yx-el-menu-popup
+  background-color: $--layout-navMenu-bg
+  .el-menu
+    margin: 0
+    padding: 0
+    background-color: $--layout-navMenu-item-bg
+    .el-submenu__title > i,span
+      color: $--layout-navMenu-color
+    .el-submenu__title
+      background-color: $--layout-navMenu-item-bg!important
+      &:hover
+        background-color: $--layout-navMenu-item-active-bg
+    .el-menu-item
+      background-color: $--layout-navMenu-item-bg!important
+      color: $--layout-navMenu-color!important
+      & > i,span
+        color: $--layout-navMenu-color
+      &:hover
+        background-color: $--layout-navMenu-item-active-bg!important
+      &.is-active
+        background-color: $--layout-navMenu-item-active-bg!important
+    .svg-icon
+      fill: $--layout-navMenu-color
+    .submenu-title
+      margin-left: 7px
+
+// 解决element-ui el-table中fixed列字段底部出现横条的问题
+.el-table:not(.el-table–scrollable-x) .el-table__fixed-right
+  height: 100% !important
+
+// 所有element-ui表单类组件开启disabled属性后的样式修改
+// 文本框
+.el-input
+  &.is-disabled
+    .el-input__inner
+      background-color: #ffffff!important
+      border-color: #DCDFE6!important
+      color: #606266!important
+// 文本域
+.el-textarea
+  &.is-disabled
+    .el-textarea__inner
+      background-color: #ffffff!important
+      border-color: #DCDFE6!important
+      color: #606266!important
+      resize: none!important
+// 单选框
+.el-radio-group
+  .el-radio-button
+    &.is-disabled
+      &.is-active
+        .el-radio-button__inner
+          background-color: $--color-primary!important
+          color: #ffffff!important
+// 下拉选择框
+.el-select
+  .is-disabled
+    .el-input__suffix
+      display: none!important
+// 级联选择框
+.el-cascader
+  &.is-disabled
+    .el-input__suffix
+      display: none!important

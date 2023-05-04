@@ -1,0 +1,85 @@
+@import "@/assets/styles/variables"
+
+.navMenu-wrapper
+  width: 200px
+  background-color: $--layout-navMenu-bg
+  transition: all .5s
+  &.collapse
+    width: 64px
+  &.navMenuPosition-top
+    width: 100%
+    height: 56px
+    overflow: hidden
+  ::v-deep .yx-el-menu-navMenuPosition-left
+    &.el-menu
+      height: 100%
+      background-color: $--layout-navMenu-bg
+      border-right: none
+      overflow: hidden auto
+      &::-webkit-scrollbar
+        width: 0
+      &.el-menu--collapse
+        .el-submenu__title
+          span,.el-submenu__icon-arrow
+            display: none
+      .el-submenu__title > i,span
+        color: $--layout-navMenu-color
+      .el-submenu__title
+        &:hover
+          background-color: $--layout-navMenu-item-active-bg
+      .el-menu--inline
+        background-color: $--layout-navMenu-item-bg
+      .el-menu-item
+        color: $--layout-navMenu-color
+        i,span
+          color: $--layout-navMenu-color
+        &:focus
+          background-color: $--layout-navMenu-item-active-bg
+        &:hover
+          background-color: $--layout-navMenu-item-active-bg
+        &.is-active
+          background-color: $--layout-navMenu-item-active-bg
+      .svg-icon
+        fill: $--layout-navMenu-color
+      .submenu-title
+        margin-left: 7px
+  ::v-deep .yx-el-menu-navMenuPosition-top
+    display: flex
+    height: 100%
+    overflow-x: auto
+    overflow-y: hidden
+    &::-webkit-scrollbar
+      height: 0
+    &.el-menu
+      border-bottom: none
+      background-color: $--layout-navMenu-bg
+      .menuItem-wrapper
+        flex: 0 0 auto
+        height: 100%
+      .el-submenu__title > i,span
+        color: $--layout-navMenu-color
+      .el-submenu__title
+        &:hover
+          background-color: $--layout-navMenu-item-active-bg
+        .el-icon-arrow-down
+          position: static
+          vertical-align: middle
+          margin-left: 8px
+          margin-top: -3px
+      .el-menu--inline
+        background-color: $--layout-navMenu-item-bg
+      .el-menu-item
+        color: $--layout-navMenu-color
+        i,span
+          color: $--layout-navMenu-color
+        &:focus
+          background-color: $--layout-navMenu-item-active-bg
+        &:hover
+          background-color: $--layout-navMenu-item-active-bg
+        &.is-active
+          background-color: $--layout-navMenu-item-active-bg
+      .svg-icon
+        fill: $--layout-navMenu-color
+      .submenu-title
+        margin-left: 7px
+

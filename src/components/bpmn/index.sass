@@ -1,0 +1,49 @@
+.bpmn-wrapper
+  height: 100%
+  .header-wrapper
+    display: flex
+    align-items: center
+    height: 45px
+    padding: 0 15px
+    border-bottom: 1px solid #EEEEEE
+    font-size: 16px
+    color: #333
+    cursor: default
+    label
+      flex: 1
+    .btnUpload
+      margin: 0 10px
+  .main-wrapper
+    position: relative
+    display: flex
+    height: calc(100% - 45px)
+    overflow-y: auto
+    .canvas-wrapper
+      flex: 1
+      height: 100%
+      .canvas
+        height: 100%
+        &.look
+          ::v-deep .djs-palette
+            display: none
+          ::v-deep .djs-overlay-context-pad
+            display: none
+    .setting-wrapper
+      flex: 0 0 30%
+      width: 30%
+      height: 100%
+      border-left: 1px solid #EEEEEE
+
+::v-deep .bjs-powered-by
+  display: none
+
+::v-deep .djs-palette
+  width: 48px
+  .bpmn-icon-intermediate-event-none,
+  .bpmn-icon-task,
+  .bpmn-icon-subprocess-expanded,
+  .bpmn-icon-data-object,
+  .bpmn-icon-data-store,
+  .bpmn-icon-participant,
+  .bpmn-icon-group
+    display: none

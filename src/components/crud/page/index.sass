@@ -1,0 +1,25 @@
+.yx-crud-page-wrapper
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  height: 60px
+  padding: 0 15px
+  background: #ffffff
+  overflow: hidden
+  ::v-deep .page-container
+    &.is-background
+      .btn-prev, .btn-next
+        background-color: #FFFFFF
+        border: 1px solid #DCDFE6
+        border-radius: 3px
+        color: #79808B
+      .el-pager
+        li
+          background-color: #FFFFFF
+          border: 1px solid #DCDFE6
+          border-radius: 3px
+          color: #999999
+          &.active
+            background-color: #FFFFFF
+            border: 1px solid #FFFFFF!important
+            color: #2F6EFF
